@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Body Mass Index</title>
+</head>
+<body>
+<script>
+
+// Body Mass Index (BMI) is a measure of healthy weight.
+// It can be calculated by taking your weight in kilograms and dividing by the square of your height in meters. Write a program that prompts the user to enter a weight in pounds and a height in feet and inches and displays the user's BMI value. To convert the users weight in pounds to their weight in kilograms you will need to use the fact that there are 2.2 pounds in one kilogram. Answer: 5'8" 140lbs = 21.3 BMI
+
+	// My version
+	// var pounds = prompt("How much do you weigh (in pounds)?");
+
+	// var kilos = (pounds / 2.2);
+
+	// var inches = prompt("How tall are you (please indicate in inches)?");
+
+	// var meters = (inches * .0254)
+
+	// var squareh = (Math.sqrt(meters)
+
+	// console.log(kilos / squareh)
+
+	// Erty's version
+
+	var feet = parseFloat(prompt("What is your height in feet?")); //parseFloat was added to the front of each prompt so that each time the user enters in a value, which is actually considers a string, parseFloat immediately turns that string into a real value
+	var inches = parseFloat(prompt("What is your height in inches?"));
+	var pounds = parseFloat(prompt ("What is your weight in pounds?"));
+	// or you could write the code in line 29 as:
+	//var pounds = (prompt ("What is your weight in pounds?");
+	//pounds = parseFloat(pounds);
+	var kilos = pounds / 2.2;
+	// var totalInches = (feet * 12) + inches; // this will concatenate because inches is a string, which is why this would require a parseFloat!
+	var totalInches = (feet * 12) + parseFloat(inches);
+	var meters = totalInches * 0.0254;
+	var bmi = kilos / (meters * meters);
+
+	console.log(bmi);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temperature in &#176F</title>
+</head>
+
+<script>
+
+// The temperature T in degrees Celsius (°C) is equal to the temperature T in degrees Fahrenheit (°F) minus 32, times 5/9.
+// Write a program which asks the user the temperature in celsius and displays it in Fahrenheit. 
+//Calculation for °C to °F: Multiply by 9, then divide by 5, then add 32
+
+
+	var tempCelsius = prompt("Please input the temperature in Celsius. This temperature will be converted to Fahrenheit.");
+	tempCelsius = parseFloat(tempCelsius);
+
+	var converFahr = (tempCelsius * 9) / 5 + 32;
+
+	console.log("The temperature you inputted converts to", converFahr, "degrees Fahrenheit");
+
+</script>
+
+<body>
+
+</body>
+</html>
